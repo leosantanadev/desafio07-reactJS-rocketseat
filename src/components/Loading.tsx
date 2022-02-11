@@ -21,3 +21,20 @@ export function Loading(): JSX.Element {
     </Flex>
   );
 }
+
+// MY LAYOUT
+
+// import { Heading, Center, Stack, Spinner } from '@chakra-ui/react';
+
+// export function Loading(): JSX.Element {
+//   return (
+//     <Center width="100%" height="100%" minHeight="75vh">
+//       <Stack direction="column" spacing={5}>
+//         <Heading fontSize={22}>Carregando aplicação...</Heading>
+//         <Center>
+//           <Spinner size="lg" />
+//         </Center>
+//       </Stack>
+//     </Center>
+//   );
+// }

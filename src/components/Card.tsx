@@ -5,6 +5,7 @@ import {
   Image,
   Skeleton,
   SkeletonText,
+  Stack,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 
@@ -17,7 +18,7 @@ interface Card {
 
 interface CardProps {
   data: Card;
-  viewImage: (url: string) => void;
+  viewImage?: (url: string) => void;
 }
 
 export function Card({ data, viewImage }: CardProps): JSX.Element {
@@ -31,7 +32,8 @@ export function Card({ data, viewImage }: CardProps): JSX.Element {
           alt={data.title}
           objectFit="cover"
           w="max"
-          h={48}
+          h="max"
+          maxHeight={264}
           borderTopRadius="md"
           onClick={() => viewImage(data.url)}
           onLoad={() => setIsLoading(false)}
@@ -48,9 +50,12 @@ export function Card({ data, viewImage }: CardProps): JSX.Element {
         ) : (
           <>
             <Heading fontSize="2xl">{data.title}</Heading>
-            <Text mt={2.5} fontSize="md">
-              {data.description}
-            </Text>
+            <Stack direction="row" mt={2.5} spacing={2}>
+              <Text fontSize="md">{data.description}</Text>
+              <Text as="strong" fontSize={16} fontWeight="bold">
+                {data.ts}
+              </Text>
+            </Stack>
           </>
         )}
       </Box>
