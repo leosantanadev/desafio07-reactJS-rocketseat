@@ -1,8 +1,8 @@
 # 💻 Sobre o desafio
 
-Nesse desafio, você deverá criar uma aplicação para treinar o que aprendeu até agora no ReactJS
+Nesse desafio, tinhamos como objetivo criar uma aplicação para treinar o que haviamos aprendido até então no ReactJS
 
-Essa será uma aplicação onde o seu principal objetivo é adicionar alguns trechos de código para que a aplicação de upload de imagens funcione corretamente. Você vai receber uma aplicação com muitas funcionalidades e estilizações já implementadas. Ela deve realizar requisições para sua própria API Next.js que vai retornar os dados do FaunaDB (banco de dados) e do ImgBB (serviço de hospedagem de imagens). A interface implementada deve seguir o layout do Figma. Você terá acesso a 4 arquivos para implementar:
+Essa aplicação tinha como seu principal objetivo adicionar alguns trechos de código para que a aplicação de upload de imagens funcione corretamente. Ela iria realizar requisições para sua própria API Next.js que retornava os dados do FaunaDB (banco de dados) e do ImgBB (serviço de hospedagem de imagens). A interface implementada deve seguir o layout do Figma (https://www.figma.com/file/rm2WXJUlzZGYI8bnraiSr7/Desafio-2-Módulo-4-ReactJS-(Copy)). As implementações em geral envolvia:
 
 - Infinite Queries e Mutations com React Query;
 - Envio de formulário com React Hook Form;
