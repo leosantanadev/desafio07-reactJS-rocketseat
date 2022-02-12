@@ -52,11 +52,11 @@ export default function Home(): JSX.Element {
   }, [data]);
 
   // useEffect with intersectionObserver to load page on infinite scroll
-  // useEffect(() => {
-  //   if (inView && hasNextPage) {
-  //     fetchNextPage();
-  //   }
-  // }, [inView]);
+  useEffect(() => {
+    if (inView && hasNextPage) {
+      fetchNextPage();
+    }
+  }, [inView]);
 
   if (isLoading) {
     return (
@@ -90,7 +90,7 @@ export default function Home(): JSX.Element {
       <Box height="max" maxW={1120} px={20} mx="auto" my={20}>
         <CardList cards={formattedData} />
 
-        <Box display="flex" alignItems="center" justifyContent="center" pt="8">
+        {/* <Box display="flex" alignItems="center" justifyContent="center" pt="8">
           {hasNextPage ? (
             <Button colorscheme="orange" type="button" onClick={loadPage}>
               {isFetchingNextPage ? 'Carregando...' : 'Carregar mais'}
@@ -98,11 +98,11 @@ export default function Home(): JSX.Element {
           ) : (
             <Text>Não há mais imagens</Text>
           )}
-        </Box>
+        </Box> */}
 
         {/* My Layout */}
         {/* LoadOnInfiniteScroll */}
-        {/* <Box
+        <Box
           display="flex"
           alignItems="center"
           justifyContent="center"
@@ -129,7 +129,7 @@ export default function Home(): JSX.Element {
             </Text>
             {(isLoading || isFetchingNextPage) && <Spinner size="sm" />}
           </Stack>
-        </Box> */}
+        </Box>
       </Box>
     </>
   );
